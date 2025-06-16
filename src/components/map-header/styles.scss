@@ -50,6 +50,11 @@
     border-radius: 7px;
 }
 
+.map-header h2,
+.map-header p {
+    font-size: var(--type-small);
+}
+
 .dungeon-theme {
     color: var(--gray);
 }
