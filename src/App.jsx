@@ -5,7 +5,7 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import DialogManager from './features/dialog-manager';
 import FloorCounter from './components/floor-counter';
-import MapHeader from './components/MapHeader';
+import MapHeader from './components/map-header';
 import Footer from './components/footer';
 import GameMenus from './features/game-menus';
 import World from './features/world';
