@@ -5,7 +5,7 @@
 }
 
 .ability-score__text {
-    font-family: Montserrat;
+    font-family: 'Montserrat Variable', Montserrat, system-ui, sans-serif;
     font-size: 12px;
     text-transform: none;
 
@@ -22,7 +22,7 @@
 }
 
 .ability-score__score-text {
-    font-family: Montserrat;
+    font-family: 'Montserrat Variable', Montserrat, system-ui, sans-serif;
     font-size: 12px;
     text-transform: none;
     letter-spacing: 2px;
@@ -43,7 +43,7 @@
     font-size: 14px;
 
     .ability-score__tooltip-text {
-        font-family: Montserrat;
+        font-family: 'Montserrat Variable', Montserrat, system-ui, sans-serif;
         font-size: 14px;
         text-transform: none;
         font-weight: 400;

@@ -7,9 +7,8 @@ import store, { persistor } from './config/store';
 import App from './App';
 import Spinner from './components/spinner';
 
-import 'typeface-roboto';
 import 'typeface-roboto-mono';
-import 'typeface-montserrat';
+import './fontawesome';
 
 import './index.scss';
 
