@@ -1,0 +1,30 @@
+.map-header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+
+  .map-header__title {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0 10px;
+    margin-top: 4px;
+    background: rgba(173, 173, 173, 0.5);
+    border-radius: 7px;
+    user-select: none;
+    pointer-events: all;
+  }
+}
+
+.realm-depths .map-header__title {
+  background: #2c1f1f;
+  color: var(--gray);
+}
+
+.realm-caverns .map-header__title {
+  background: #1a233a;
+  color: var(--gray);
+}

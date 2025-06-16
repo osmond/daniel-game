@@ -1,7 +1,9 @@
 # React RPG
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 React RPG is an open-source RPG made with React and Redux. Experience the 2D turn-based, dungeon crawler that comes with two game modes: Story and Endless. Story mode will lead you through a short story while introducing you to the most powerful creatures. In Endless mode, a unique challenge waits around every corner, as no two maps are the same.
@@ -11,6 +13,7 @@ Play now at [react-rpg.com](https://react-rpg.com)!
 There is a [React Native webview wrapper](https://github.com/ASteinheiser/ReactRPGNative) for React RPG, however it's no longer available via Google Play or App Store. If you would like to download React RPG for your mobile device, I recommend downloading the Progressive Web App ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing)).
 
 ### Read more about React RPG
+
 - [Medium: Making an RPG with React + Redux](https://medium.com/@andrewsteinheiser/making-an-rpg-with-react-redux-dcfffdb06797)
 - [Made With React Native Interview](http://madewithreactnative.com/react-rpg/)
 - [Medium: The Future of React RPG](https://medium.com/@andrewsteinheiser/the-future-of-react-rpg-be257c950eee)
@@ -24,24 +27,28 @@ As a personal fan of DnD:5e, I thought this expansion was wonderful and decided 
 ### Arcane Interfaces: Daniel’s Edition
 
 ![check][checkmark] DnD Classes and Races
- - Classes: Fighter, Ranger and Wizard
- - Races: Human, Elf and Dwarf
- - DnD Ability Scores
+
+- Classes: Fighter, Ranger and Wizard
+- Races: Human, Elf and Dwarf
+- DnD Ability Scores
 
 ![check][checkmark] New Combat Systems
- - Dice-based Combat
- - Spellcasting System
- - Diversity in Enemy Attacks
+
+- Dice-based Combat
+- Spellcasting System
+- Diversity in Enemy Attacks
 
 ![check][checkmark] New Content
- - New Maps and Tiles
- - New Enemies
- - New Items in Shop
+
+- New Maps and Tiles
+- New Enemies
+- New Items in Shop
 
 ![check][checkmark] General Improvements
- - Improved Tutorial
- - Save/Load System
- - Customisable Outfit Color
+
+- Improved Tutorial
+- Save/Load System
+- Customisable Outfit Color
 
 Huge thanks to the four individuals that put in the hard work to make this update possible! They are credited in the LICENSE and in the Contributers section at the bottom of this page.
 
@@ -49,23 +56,43 @@ Huge thanks to the four individuals that put in the hard work to make this updat
 
 1. Clone the repository
 
-    `git clone https://github.com/ASteinheiser/react-rpg.com`
+   `git clone https://github.com/ASteinheiser/react-rpg.com`
 
 1. Change to the directory containing the repository
 
-    `cd react-rpg.com`
+   `cd react-rpg.com`
 
 1. Ensure you are using the correct node version
 
-    `nvm use`
+   `nvm use`
 
 1. Install the dependencies
 
-    `yarn install --frozen-lockfile`
+   `yarn install --frozen-lockfile`
 
 1. Start the game locally
 
-    `yarn start`
+   `yarn start`
+
+### Map Header Themes
+
+The `MapHeader` component supports optional theme classes that alter its
+appearance. Base styles and themes are defined in
+`src/components/map-header/styles.scss`.
+
+Available classes:
+
+- `.realm-depths` – style used for the Depths realm
+- `.realm-caverns` – style used for the Caverns realm
+
+Use a theme by passing the class name to `MapHeader`:
+
+```jsx
+<MapHeader className="realm-depths" title="The Depths" />
+```
+
+To add new themes, define additional classes in the stylesheet and supply the
+class name via the `className` prop.
 
 ## Contributors
 
