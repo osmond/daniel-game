@@ -11,7 +11,7 @@ const Footer = () => {
 
             <a
                 className="footer__link"
-                href="https://github.com/ASteinheiser/react-rpg.com"
+                href="https://github.com/osmond/daniel-game"
                 target="_blank"
                 rel="noopener noreferrer"
             >
