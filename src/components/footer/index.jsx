@@ -7,7 +7,7 @@ import './styles.scss';
 const Footer = () => {
     return (
         <div className="footer__container">
-            <span>{`Made with ♥ by Andrew Steinheiser - v${version} - `}</span>
+            <span>{`v${version} - `}</span>
 
             <a
                 className="footer__link"
