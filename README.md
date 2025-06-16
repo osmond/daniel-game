@@ -76,23 +76,18 @@ Huge thanks to the four individuals that put in the hard work to make this updat
 
 ### Map Header Themes
 
-The `MapHeader` component supports optional theme classes that alter its
-appearance. Base styles and themes are defined in
-`src/components/map-header/styles.scss`.
+The `MapHeader` component displays the name and description of the realm for the
+current floor. Pass the floor identifier to the `currentFloor` prop and the
+component will determine which realm it belongs to using the configuration in
+`src/data/realms.js`.
 
-Available classes:
+Each realm entry defines a `themeClass` such as `.dungeon-theme` or
+`.cave-theme`. These classes are declared in
+`src/components/map-header/styles.scss` and are automatically applied to the map
+header when its realm is active.
 
-- `.realm-depths` – style used for the Depths realm
-- `.realm-caverns` – style used for the Caverns realm
-
-Use a theme by passing the class name to `MapHeader`:
-
-```jsx
-<MapHeader className="realm-depths" title="The Depths" />
-```
-
-To add new themes, define additional classes in the stylesheet and supply the
-class name via the `className` prop.
+To introduce new themes, add a realm object with its associated `themeClass` in
+`src/data/realms.js` and provide the corresponding CSS rules in the stylesheet.
 
 ## Contributors
 
