@@ -1,4 +1,5 @@
 html {
+
   --red: #650501;
   --green: #258000;
   --gray: #adadad;
@@ -32,6 +33,7 @@ button {
   font-size: 20px;
   font-family: Montserrat;
   text-transform: uppercase;
+
 
   color: var(--gray);
   outline-color: var(--gray);
@@ -136,4 +138,28 @@ aside.sidebar {
 
 footer.game-footer {
   grid-area: footer;
+}
+
+h1 {
+    font-size: var(--type-xlarge);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--type-large);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: var(--type-base);
+    line-height: 1.3;
+}
+
+p {
+    font-size: var(--type-base);
+    line-height: 1.5;
+}
+
+small {
+    font-size: var(--type-small);
 }
