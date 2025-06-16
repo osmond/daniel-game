@@ -15,8 +15,6 @@
     padding-right: 10px;
     font-size: 15px;
     font-family: 'Roboto Mono';
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--info {
@@ -24,29 +22,21 @@
     font-size: 16px;
     text-transform: none;
     font-family: 'Roboto Mono';
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--level {
     color: var(--purple);
     font-size: 18px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--gold {
     color: var(--orange);
     font-size: 18px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--defence {
     color: var(--purple);
     font-size: 18px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--blank {
@@ -56,22 +46,16 @@
 .stats__text--melee {
     color: var(--light-red);
     font-size: 14px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--ranged {
     color: var(--green);
     font-size: 14px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats__text--magic {
     color: var(--blue);
     font-size: 14px;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 }
 
 .stats-column__spacing {
@@ -128,9 +112,6 @@
     font-size: 22px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
         1px 1px 0 #000;
-
-    letter-spacing: 0.08em;
-    line-height: 1.4;
 
     font-weight: 500;
 
