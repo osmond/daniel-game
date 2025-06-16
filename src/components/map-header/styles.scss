@@ -53,7 +53,8 @@
 .map-header h1,
 .map-header h2,
 .map-header p {
-    font-size: var(--type-small);
+    font-size: 12px;
+    line-height: 1rem;
 }
 
 .dungeon-theme {
