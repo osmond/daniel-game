@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import MapHeader from '../../components/MapHeader';
+import MapHeader from '../../components/map-header';
 import realms from '../../data/realms';
 
 describe('MapHeader', () => {
