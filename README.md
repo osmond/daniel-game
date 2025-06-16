@@ -1,4 +1,6 @@
-# React RPG
+# Arcane Interfaces: Daniel’s Edition
+
+> This repository contains my personal fork of [React RPG](https://github.com/ASteinheiser/react-rpg.com). I have customized the original open-source game to experiment with new mechanics and content. Huge thanks to Andrew Steinheiser and the entire React RPG community for creating such an awesome foundation!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -6,9 +8,9 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-React RPG is an open-source RPG made with React and Redux. Experience the 2D turn-based, dungeon crawler that comes with two game modes: Story and Endless. Story mode will lead you through a short story while introducing you to the most powerful creatures. In Endless mode, a unique challenge waits around every corner, as no two maps are the same.
+React RPG, the upstream project, is an open-source RPG made with React and Redux. Experience the 2D turn-based, dungeon crawler that comes with two game modes: Story and Endless. Story mode will lead you through a short story while introducing you to the most powerful creatures. In Endless mode, a unique challenge waits around every corner, as no two maps are the same.
 
-Play now at [react-rpg.com](https://react-rpg.com)!
+Play the original game at [react-rpg.com](https://react-rpg.com)!
 
 There is a [React Native webview wrapper](https://github.com/ASteinheiser/ReactRPGNative) for React RPG, however it's no longer available via Google Play or App Store. If you would like to download React RPG for your mobile device, I recommend downloading the Progressive Web App ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing)).
 
@@ -92,6 +94,10 @@ header when its realm is active.
 
 To introduce new themes, add a realm object with its associated `themeClass` in
 `src/data/realms.js` and provide the corresponding CSS rules in the stylesheet.
+
+## Acknowledgments
+
+I want to give a special shout-out to [Andrew Steinheiser](https://github.com/ASteinheiser) and all of the [React RPG](https://github.com/ASteinheiser/react-rpg.com) contributors. Without their hard work and generosity in open sourcing the original project, this customized version wouldn't exist.
 
 ## Contributors
 
