@@ -70,6 +70,10 @@ Huge thanks to the four individuals that put in the hard work to make this updat
 
    `yarn install --frozen-lockfile`
 
+1. Run the tests
+
+   `yarn test`
+
 1. Start the game locally
 
    `yarn start`
