@@ -1,32 +1,32 @@
 .journal-dialog__container {
-  flex: 1;
-  width: 20em;
-  height: 20em;
+    flex: 1;
+    width: 20em;
+    height: 20em;
 
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .journal-container {
-  position: relative;
-  margin-top: var(--space-1);
-  margin-right: var(--space-1);
-  width: 20em;
-  height: 20em;
-  float: right;
+    position: relative;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 20em;
+    height: 20em;
+    float: right;
 }
 
 .journal-log {
-  background-color: var(--dark-gray);
-  width: 100%;
+    background-color: var(--dark-gray);
+    width: 100%;
 
-  justify-content: center;
+    justify-content: center;
 
-  color: var(--white);
-  text-transform: none;
+    color: var(--white);
+    text-transform: none;
 
-  padding: var(--space-1) var(--space-2);
+    padding: 12px 15px;
 
-  resize: none;
+    resize: none;
 
-  border: none;
+    border: none;
 }

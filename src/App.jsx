@@ -18,77 +18,119 @@ import Abilities from './features/abilities';
 import JournalSide from './components/journal-side';
 
 const App = ({ appState, world, dialog }) => {
-  useGameViewportScaling();
+    useGameViewportScaling();
 
-  // disable scrolling of the page
-  // prevents iOS Safari bouncing during movement
-  useEffect(() => {
-    disableBodyScroll(document.getElementById('react-rpg'));
-    return clearAllBodyScrollLocks;
-  }, []);
+    // disable scrolling of the page
+    // prevents iOS Safari bouncing during movement
+    useEffect(() => {
+        disableBodyScroll(document.getElementById('react-rpg'));
+        return clearAllBodyScrollLocks;
+    }, []);
 
-  const { journalSideMenu } = appState;
-  const { gameMode, floorNum, currentMap } = world;
-  const currentFloorId = currentMap || floorNum;
-  const { gameStart, gameOver, gameRunning, journalSideMenuOpen } = dialog;
+    const { sideMenu, journalSideMenu } = appState;
+    const { gameMode, floorNum, currentMap } = world;
+    const currentFloorId = currentMap || floorNum;
+    const { gameStart, gameOver, gameRunning, journalSideMenuOpen } = dialog;
 
-  const disableJournal =
-    gameStart || gameOver || !gameRunning || !journalSideMenu || !journalSideMenuOpen;
+    const disableJournal =
+        gameStart ||
+        gameOver ||
+        !gameRunning ||
+        !journalSideMenu ||
+        !journalSideMenuOpen;
 
-  let showFooter = true;
+    let showFooter = true;
 
-  const nativeApp = window.location.search === '?nativeApp=true';
-  // don't show the footer if on a mobile device
-  // or using the native app query param
-  if (nativeApp || isMobile) {
-    showFooter = false;
-  }
+    const nativeApp = window.location.search === '?nativeApp=true';
+    // don't show the footer if on a mobile device
+    // or using the native app query param
+    if (nativeApp || isMobile) {
+        showFooter = false;
+    }
 
-  return (
-    <div className="game-wrapper">
-      <header className="game-header">
-        <MapHeader currentFloor={currentFloorId} />
-      </header>
+    if (sideMenu) {
+        return (
+            <>
+                <div className={`centered flex-row`}>
+                    <JournalSide disabled={disableJournal} />
+                    <div className={`centered ${sideMenu ? 'flex-row' : 'flex-column'}`}>
+                        <div className={'centered flex-row'}>
+                            <Viewport>
+                                <World />
+                                <DialogManager />
+                                <Tutorial />
+                                <Abilities />
+                                <Spellbook />
 
-      {!disableJournal && (
-        <aside className="sidebar">
-          <JournalSide disabled={disableJournal} />
-        </aside>
-      )}
+                                <MapHeader currentFloor={currentFloorId} />
 
-      <main className="main-canvas centered flex-row">
-        <Viewport>
-          <World />
-          <DialogManager />
-          <Tutorial />
-          <Abilities />
-          <Spellbook />
+                                {gameMode === 'endless' ? (
+                                    <FloorCounter floor={floorNum} />
+                                ) : (
+                                    currentMap && (
+                                        <FloorCounter
+                                            floor={currentMap.replace('_', '-')}
+                                        />
+                                    )
+                                )}
+                            </Viewport>
+                        </div>
 
-          {gameMode === 'endless' ? (
-            <FloorCounter floor={floorNum} />
-          ) : (
-            currentMap && <FloorCounter floor={currentMap.replace('_', '-')} />
-          )}
-        </Viewport>
-      </main>
+                        <GameMenus />
+                    </div>
+                </div>
+                {showFooter && <Footer />}
+            </>
+        );
+    }
 
-      <div className="info-panel">
-        <GameMenus />
-      </div>
+    return (
+        <>
+            <div className={`centered flex-row`}>
+                <div
+                    style={{
+                        float: 'left',
+                        marginLeft: '-410px',
+                        display: disableJournal ? 'none' : 'block',
+                    }}
+                >
+                    <JournalSide disabled={disableJournal} />
+                </div>
+                <div className={`centered ${sideMenu ? 'flex-row' : 'flex-column'}`}>
+                    <div className={'centered flex-row'}>
+                        <Viewport>
+                            <World />
+                            <DialogManager />
+                            <Tutorial />
+                            <Abilities />
+                            <Spellbook />
 
-      {showFooter && (
-        <footer className="game-footer">
-          <Footer />
-        </footer>
-      )}
-    </div>
-  );
+                            <MapHeader currentFloor={currentFloorId} />
+
+                            {gameMode === 'endless' ? (
+                                <FloorCounter floor={floorNum} />
+                            ) : (
+                                currentMap && (
+                                    <FloorCounter
+                                        floor={currentMap.replace('_', '-')}
+                                    />
+                                )
+                            )}
+                        </Viewport>
+                    </div>
+
+                    <GameMenus />
+                </div>
+            </div>
+            {showFooter && <Footer />}
+        </>
+    );
 };
 
 const mapStateToProps = ({ appState, world, dialog }) => ({
-  appState,
-  world,
-  dialog,
+    appState,
+    world,
+    dialog,
 });
 
 export default connect(mapStateToProps)(App);
