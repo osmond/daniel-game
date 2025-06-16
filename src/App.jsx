@@ -5,6 +5,7 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import DialogManager from './features/dialog-manager';
 import FloorCounter from './components/floor-counter';
+import MapHeader from './components/MapHeader';
 import Footer from './components/footer';
 import GameMenus from './features/game-menus';
 import World from './features/world';
@@ -28,6 +29,7 @@ const App = ({ appState, world, dialog }) => {
 
     const { sideMenu, journalSideMenu } = appState;
     const { gameMode, floorNum, currentMap } = world;
+    const currentFloorId = currentMap || floorNum;
     const { gameStart, gameOver, gameRunning, journalSideMenuOpen } = dialog;
 
     const disableJournal =
@@ -59,6 +61,8 @@ const App = ({ appState, world, dialog }) => {
                                 <Tutorial />
                                 <Abilities />
                                 <Spellbook />
+
+                                <MapHeader currentFloor={currentFloorId} />
 
                                 {gameMode === 'endless' ? (
                                     <FloorCounter floor={floorNum} />
@@ -100,6 +104,8 @@ const App = ({ appState, world, dialog }) => {
                             <Tutorial />
                             <Abilities />
                             <Spellbook />
+
+                            <MapHeader currentFloor={currentFloorId} />
 
                             {gameMode === 'endless' ? (
                                 <FloorCounter floor={floorNum} />

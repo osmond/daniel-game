@@ -1,4 +1,39 @@
 .map-header {
-  text-align: center;
-  margin-bottom: 8px;
+
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+
+    width: fit-content;
+    margin: auto;
+    padding: 4px 10px;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+
+    background: rgba(173, 173, 173, 0.5);
+    border-radius: 7px;
+}
+
+.dungeon-theme {
+    color: var(--gray);
+}
+
+.cave-theme {
+    color: var(--blue);
+}
+
+.ruins-theme {
+    color: var(--orange);
+}
+
+.catacomb-theme {
+    color: var(--purple);
+}
+
+.keep-theme {
+    color: var(--light-red);
+
 }
