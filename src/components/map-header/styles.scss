@@ -33,16 +33,17 @@
 .map-header {
 
     position: absolute;
-    top: 4px;
+    bottom: 4px;
     left: 0;
     right: 0;
+    top: auto;
 
     width: fit-content;
     margin: auto;
     padding: 4px 10px;
 
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
 
     background: rgba(173, 173, 173, 0.5);
