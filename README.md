@@ -15,13 +15,13 @@ There is a [React Native webview wrapper](https://github.com/ASteinheiser/ReactR
 - [Made With React Native Interview](http://madewithreactnative.com/react-rpg/)
 - [Medium: The Future of React RPG](https://medium.com/@andrewsteinheiser/the-future-of-react-rpg-be257c950eee)
 
-# React RPG: 2e (Major Update)
+# Arcane Interfaces: Daniel’s Edition (Major Update)
 
 During 2020 to 2022, a fork was made called [roll-for-reaction](https://github.com/Matteas-Eden/roll-for-reaction), which "aimed to enhance the systems already present in the base game by modifying and adding elements to lightly emulate the popular tabletop role-playing game _Dungeons and Dragons: 5th Edition_".
 
 As a personal fan of DnD:5e, I thought this expansion was wonderful and decided that the official game should merge with this fork, giving way to a new (tongue-in-cheek) era dubbed:
 
-### React RPG: 2nd Edition
+### Arcane Interfaces: Daniel’s Edition
 
 ![check][checkmark] DnD Classes and Races
  - Classes: Fighter, Ranger and Wizard
